@@ -173,7 +173,7 @@ function run_turn(rules)
     set_turn(turn)
   end
 
-  orderfile = orderfile or config.basepath .. '/orders.' .. turn
+  orderfile = orderfile or config.basepath .. '/orders/orders.' .. turn
   eressea.log.debug("executing turn " .. get_turn() .. " with " .. orderfile .. " with rules=" .. config.rules)
   local result = process(rules, orderfile)
   if result==0 then
